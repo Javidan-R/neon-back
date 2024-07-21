@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/db.config'); 
+const sequelize = require('../config/db.config');
 
 const Bonus = sequelize.define('Bonus', {
   code: {
@@ -10,6 +10,10 @@ const Bonus = sequelize.define('Bonus', {
   used: {
     type: DataTypes.BOOLEAN,
     defaultValue: false
+  },
+  amount: {
+    type: DataTypes.INTEGER,
+    defaultValue: 0
   }
 });
 
